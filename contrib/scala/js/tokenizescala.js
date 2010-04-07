@@ -1,5 +1,10 @@
 /* Tokenizer for JavaScript code */
 
+/* copy/change from parsejavascript.js
+ * used in scripster: http://scripster.razie.com
+ * Razvan Cojocaru
+ */
+
 var tokenizeJavaScript = (function() {
   // Advance the stream until the given character (not preceded by a
   // backslash) is encountered, or the end of the line is reached.
@@ -47,6 +52,7 @@ var tokenizeJavaScript = (function() {
       "import": result("import", "keyword"), "package": result("package", "keyword"),
       "extends": result("extends", "keyword"),
       "override": result("override", "keyword"),
+      "trait": result("trait", "keyword"),
       "yield": keywordB, "match": keywordB, 
       "Unit" : atom, "Nothing" : atom, "Nil" : atom,
       "Any" : atom, "AnyRef" : atom,

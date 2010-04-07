@@ -7,6 +7,11 @@
  * See manual.html for more info about the parser interface.
  */
 
+/* copy/change from parsejavascript.js
+ * used in scripster: http://scripster.razie.com
+ * Razvan Cojocaru
+ */
+
 var JSParser = Editor.Parser = (function() {
   // Token types that can be considered to be atoms.
   var atomicTypes = {"atom": true, "number": true, "variable": true, "string": true, "regexp": true};
